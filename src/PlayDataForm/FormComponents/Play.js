@@ -6,9 +6,10 @@ const Play = props => {
     return (
         <input 
             className="play-input"
-            placeholder="Play #"
+            type="number"
             name="play"
             onChange={e => setter(e.target.value)}
+            placeholder={play < 1 ? "Play #" : play}
         />
     )
 }

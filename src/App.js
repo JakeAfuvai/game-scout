@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 import PlayDataForm from "./PlayDataForm/PlayDataForm"
 
 const App = props => {
+    console.log(props.state.playInfo)
     return (
         <div className="app-container">
             <PlayDataForm addPlay={props.addPlay}/>

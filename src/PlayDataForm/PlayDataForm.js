@@ -9,7 +9,7 @@ import Playtype from "./FormComponents/Playtype"
 import Result from "./FormComponents/Result"
 
 const PlayDataForm = props => {
-    const [play, setPlay] = useState()
+    const [play, setPlay] = useState(0)
     const [down, setDown] = useState()
     const [distance, setDistance] = useState()
     const [yard, setYard] = useState()
@@ -31,7 +31,7 @@ const PlayDataForm = props => {
 
         props.addPlay(playToAdd)
 
-        setPlay()
+        setPlay(0)
         setDown()
         setDistance()
         setYard()
