@@ -5,7 +5,7 @@ import PlayDataForm from "./PlayDataForm/PlayDataForm"
 const App = props => {
     return (
         <div className="app-container">
-            <PlayDataForm />
+            <PlayDataForm addPlay={props.addPlay}/>
         </div>
     )
 }

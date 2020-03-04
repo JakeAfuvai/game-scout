@@ -17,8 +17,31 @@ const PlayDataForm = props => {
     const [playtype, setPlaytype] = useState()
     const [result, setResult] = useState()
 
+    const handleSubmit = e => {
+        e.preventDefault()
+        const playToAdd = {
+            play: play,
+            down: down,
+            distance: distance,
+            yard: yard,
+            formation: formation,
+            playtype: playtype,
+            result: result
+        }
+
+        props.addPlay(playToAdd)
+
+        setPlay()
+        setDown()
+        setDistance()
+        setYard()
+        setFormation()
+        setPlaytype()
+        setResult()
+    }
+
     return (
-        <form className="play-data-form" onSubmit={e => {e.preventDefault(); console.log("submitted")}}>
+        <form className="play-data-form" onSubmit={e => handleSubmit(e)}>
             <Play play={play} setter={setPlay}/>
             <Down down={down} setter={setDown}/>
             <Distance distance={distance} setter={setDistance}/>

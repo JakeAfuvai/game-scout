@@ -1,10 +1,15 @@
 import React from "react"
 
 const Play = props => {
+    const { play, setter } = props
+    
     return (
-        <div className="play-container">
-            Play
-        </div>
+        <input 
+            className="play-input"
+            placeholder="Play #"
+            name="play"
+            onChange={e => setter(e.target.value)}
+        />
     )
 }
 
